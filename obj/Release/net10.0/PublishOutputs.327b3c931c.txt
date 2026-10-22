@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\resources\gamedata\offsets.jsonc
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\resources\gamedata\patches.jsonc
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\resources\gamedata\signatures.jsonc
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\resources\templates\template.jsonc
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\resources\translations\en.jsonc
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\ConnectAnnouncer.dll
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\ConnectAnnouncer.pdb
+C:\Users\user\Desktop\ConnectAnnouncer\ConnectAnnouncer\build\publish\ConnectAnnouncer\ConnectAnnouncer.deps.json
