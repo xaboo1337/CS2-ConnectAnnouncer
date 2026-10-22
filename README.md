@@ -14,6 +14,7 @@
 
 ### 📋 Overview
 A lightweight and fully asynchronous connection announcer for Counter-Strike 2. It announces connecting players in chat with their location (Country, City) without causing game-thread delays or tickrate drops.
+<img width="1024" height="106" alt="image" src="https://github.com/user-attachments/assets/ae5c99c6-002f-487d-8a16-ae16292733a3" />
 
 ---
 
