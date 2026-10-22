@@ -1,24 +1,35 @@
-# ⚡ CS2 ConnectAnnouncer
+<div align="center">
 
-> **High-Performance Player Connection Announcer with GeoIP Intelligence for SwiftlyS2**
+# ⚡ ConnectAnnouncer
+
+**High-Performance CS2 Player Connection Announcer with GeoIP for SwiftlyS2**
+
+[![SwiftlyS2](https://img.shields.io/badge/SwiftlyS2-Compatible-blue.svg)](https://swiftlys2.net)
+[![Release](https://img.shields.io/github/v/release/xaboo1337/CS2-ConnectAnnouncer?color=green)](https://github.com/xaboo1337/CS2-ConnectAnnouncer/releases)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)]()
+
+</div>
 
 ---
 
 ### 📋 Overview
-**ConnectAnnouncer** is an ultra-lightweight, high-performance, and fully asynchronous connection announcer plugin designed for Counter-Strike 2 dedicated servers running the SwiftlyS2 framework. It detects connecting players, resolves their geographical location (Country and City) in real time, and broadcasts custom colored chat notifications without degrading server tickrate or causing game-thread delays.
+A lightweight and fully asynchronous connection announcer for Counter-Strike 2. It announces connecting players in chat with their location (Country, City) without causing game-thread delays or tickrate drops.
 
 ---
 
-## 💎 Features at a Glance
-
-* 🚀 **Zero Tick Lag (Fully Asynchronous)** — Network operations run completely in background worker threads (`Task.Run`).
-* 🌍 **GeoIP Lookup** — Automatic country and city resolution via `ip-api.com`.
-* 🛡️ **Built-in Memory Cache** — Caches up to 2,000 unique IP addresses to eliminate redundant queries and stay within free-tier API rate limits.
-* ⚙️ **Hot-Reload Architecture** — Configuration changes take effect immediately on file save without needing a plugin reload (`reloadOnChange: true`).
-* 🔒 **Local IP Filter** — Automatic identification and filtering for loopback, local subnets (RFC 1918), and CGNAT ranges.
-* 🤖 **Bot Filtering** — Automatically ignores server bots and fake clients (`IsFakeClient`).
-* 🔁 **Slot-Recycling Protection** — Verifies player identity before sending messages to prevent misattribution if a player disconnects during the API lookup.
+### 🚀 Features
+* **Zero Tick Lag** — 100% asynchronous background HTTP calls (`Task.Run`).
+* **GeoIP Intelligence** — Resolves country and city via `ip-api.com`.
+* **In-Memory Cache** — Caches up to 2,000 IPs to prevent duplicate requests.
+* **Auto Configuration** — Generates `config.jsonc` with live reload (`reloadOnChange`).
+* **Private IP Safe** — Automatically detects local, LAN, and Loopback IP addresses.
+* **Bot Filtering** — Automatically ignores fake clients and server bots.
 
 ---
 
-## 📥 Installation
+### 📥 Installation
+1. Ensure your server runs **[SwiftlyS2](https://swiftlys2.net/)**.
+2. Download `ConnectAnnouncer.dll` from the **[Releases](../../releases)** tab.
+3. Place `ConnectAnnouncer.dll` in:
+   ```text
+   csgo/addons/swiftlys2/plugins/ConnectAnnouncer/ConnectAnnouncer.dll
