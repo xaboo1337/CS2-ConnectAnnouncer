@@ -1,36 +1,45 @@
 <div align="center">
-  <img src="https://pan.samyyc.dev/s/VYmMXE" />
-  <h2><strong>My Plugin</strong></h2>
-  <h3>No description.</h3>
+
+# 🌐 ConnectAnnouncer (CS2)
+
+**A high-performance, asynchronous connection announcer plugin for Counter-Strike 2 powered by the SwiftlyS2 framework, featuring GeoIP detection, zero game-thread lag, and customizable colored chat broadcasts.**
+
+[![SwiftlyS2](https://img.shields.io/badge/SwiftlyS2-Compatible-blue.svg)](https://swiftlys2.net)
+[![GitHub release](https://img.shields.io/github/v/release/xaboo1337/CS2-ConnectAnnouncer?color=brightgreen)](https://github.com/xaboo1337/CS2-ConnectAnnouncer/releases)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-lightgrey.svg)]()
+
 </div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
-  <img src="https://img.shields.io/github/downloads/xaboo/ConnectAnnouncer/total" alt="Downloads">
-  <img src="https://img.shields.io/github/stars/xaboo/ConnectAnnouncer?style=flat&logo=github" alt="Stars">
-  <img src="https://img.shields.io/github/license/xaboo/ConnectAnnouncer" alt="License">
-</p>
+---
 
-## Getting Started (delete me)
+## 🚀 Key Features
 
-1. **Edit `PluginMetadata` Attribute**  
-   - Set your plugin's `Id`, `Name`, `Version`, `Author` and `Description`.
-2. **Edit `ConnectAnnouncer.csproj`**  
-   - Set the `<AssemblyName>` property to match your plugin's main class name.
-   - Add any additional dependencies as needed.
-3. **Implement your plugin logic** in C#.
-   - Place your main plugin class in the root of the project.
-   - Use the SwiftlyS2 managed API to interact with the game and core.
-4. **Add resources**  
-   - Place any required files in the `gamedata`, `templates`, or `translations` folders as needed.
+* **Instant & Reliable Detection**: Accurately triggers on client connection (`OnClientPutInServer`) while filtering out bot accounts automatically.
+* **Smart GeoIP Integration**: Fetches real-world location (Country & City) via `ip-api.com`.
+* **Zero Server Tick-Drop (Fully Async)**: Network requests are completely offloaded to background tasks with thread-safe `Core.Scheduler.NextTick` UI rendering.
+* **In-Memory GeoCache**: Caches up to 2,000 unique IP addresses to avoid duplicate API requests and protect free-tier rate limits.
+* **Auto-Configuration (`.jsonc`)**: Automatically sets up configuration with structured comment blocks and live-reload support (`reloadOnChange`).
+* **LAN / Localhost Filtering**: Identifies loopback, private subnets (RFC 1918), and CGNAT ranges, displaying custom local text instead of network errors.
+* **Slot-Recycling Protection**: Safely validates player instances to prevent misattributed notifications if a player quickly reconnects.
 
-## Building
+---
 
-- Open the project in your preferred .NET IDE (e.g., Visual Studio, Rider, VS Code).
-- Build the project. The output DLL and resources will be placed in the `build/` directory.
-- The publish process will also create a zip file for easy distribution.
+## 📑 Documentation
 
-## Publishing
+| Section | Description |
+| :--- | :--- |
+| **[Installation](#-installation)** | Step-by-step setup guide for your CS2 dedicated server |
+| **[Configuration](#%EF%B8%8F-configuration)** | Explanation of settings and formatting placeholders |
+| **[Color Tags](#-chat-color-tags)** | Available color formatting codes for in-game chat |
+| **[Compiling Source](#%EF%B8%8F-building-from-source)** | Instructions to build the `.dll` locally |
 
-- Use the `dotnet publish -c Release` command to build and package your plugin.
-- Distribute the generated zip file or the contents of the `build/publish` directory.
+---
+
+## 📦 Installation
+
+1. Make sure your server has **[SwiftlyS2](https://swiftlys2.net/)** installed and up-to-date.
+2. Go to the **[Releases](../../releases)** tab and download `ConnectAnnouncer.zip` (or `ConnectAnnouncer.dll`).
+3. Extract or place `ConnectAnnouncer.dll` into your server directory:
+   ```text
+   csgo/addons/swiftlys2/plugins/ConnectAnnouncer/ConnectAnnouncer.dll
